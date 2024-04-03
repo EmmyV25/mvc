@@ -1,6 +1,6 @@
-My repo README
-=================
+![image](./public/img/symfony.png)
 
-About my repo:
+# Web application using Symfony
 
-The link to GitHub: https://github.com/EmmyV25/mvc
+## How to clone
+`git clone https://github.com/EmmyV25/mvc`
