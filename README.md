@@ -1,4 +1,4 @@
-My repo READEME
+My repo README
 =================
 
 About my repo:
