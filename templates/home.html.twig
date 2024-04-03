@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+    <article class="article">
+        <header>
+            <h1>Home</h1>
+
+            <p>Mitt namn är Miko och jag är en huskatt. Jag gillar hoppa upp på min mattes hylla och bita hennes figur men hon flyttar alltid på den när jag är där uppe.
+            En gång råkde jag knuffa ner en av hennes akryl figurer och den sprack. Hon blev sur och straffade mig. Jag fick inte äta godis på hela dagen.
+            Men såklart kan jag inte ge upp på mitt godis så jag öppnade lådan själv och tog godispåsen. Det var jättegott :)</p>
+
+            <a href="{{ asset('img/miko.png') }}">
+                <img src="{{ asset('img/miko.png') }}" alt="">
+            </a>
+        </header>
+    </article>
+
+{% endblock %}
