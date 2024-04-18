@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Shuffle Deck of Cards{% endblock %}
+
+{% block body %}
+
+<p>
+{% for card in shuffledDeck %}
+
+{{ include('card/show_cards.html.twig') }}
+
+{% endfor %}
+</p>
+
+{% endblock %}

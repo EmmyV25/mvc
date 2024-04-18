@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Draw Card{% endblock %}
+
+{% block body %}
+
+<p><span>{{ cards_left }}</span> cards left</p>
+
+{{ include('card/show_cards.html.twig') }}
+
+<form method="post" action="">
+    <input type="submit" name="doit" value="Draw Card">
+</form>
+
+{{ include('pig/flash.html.twig') }}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Pig Game{% endblock %}
+
+{% block body %}
+    <p>The session contains:</p>
+    
+    {{ dump(session) }}
+
+    <a href="{{ path('pig_destroy_session') }}">Destroy Session</a>
+
+    {{ include('pig/flash.html.twig') }}
+{% endblock %}

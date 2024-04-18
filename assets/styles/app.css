@@ -1,3 +1,144 @@
+.site-title {
+    color: #ffffff;
+}
+
 body {
-    background-color: skyblue;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: #b3a495;
+    font-size: 1.5em;
+}
+
+.main {
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background-color: #b3a495;
+    color: #ffffff;
+}
+
+img {
+    height: 500px;
+}
+
+.navbar {
+    background-color: #a69584;
+    text-align: center;
+    color: #ffffff;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.5em 0.7em;
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+.article {
+    overflow: auto;
+    background: #a69584;
+    border-left: 1px solid #a69584;
+    border-right: 1px solid #a69584;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.article h1 {
+    font-size: 2.2em;
+    border-bottom: 4px double #f4f4f4;
+    font-family: Cambria, serif sans-serif, Helvetica, sans-serif;
+    font-variant: small-caps;
+}
+
+.two-col-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.aside {
+    background-color: #a69584;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 24px;
+}
+
+.aside-left {
+    border-left: 10px solid #b3a495;
+}
+
+.aside a {
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.footer {
+    background: #a69584;
+    color: #fff;
+    padding: 1em;
+}
+
+@media (max-width: 700px) {
+    .two-col-layout {
+        flex-wrap:wrap
+    }
+
+    .two-col-layout>.aside,.two-col-layout>.main {
+        width: 100%;
+    }
+}
+
+input {
+    font-size: 1em;
+}
+
+h1 {
+    border-bottom: 4px double green;
+}
+
+.die {
+    font-size: 3em;
+}
+
+ul.dicearea {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.dicearea li {
+    display: inline;
+}
+
+.flash-notice {
+    padding: 0.5em;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.flash-notice:before {
+    content: "ⓘ";
+}
+
+.flash-warning {
+    padding: 0.5em;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.flash-warning:before {
+    content: "⚠";
+}
+
+.card {
+    font-size: 5em;
+}
+
+.red {
+    color: #df0000;
+}
+
+.black {
+    color: black;
 }

@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Deck of Cards{% endblock %}
+
+{% block body %}
+
+<p>
+{% for card in cards %}
+
+{{ include('card/show_cards.html.twig') }}
+
+{% endfor %}
+</p>
+
+{% endblock %}
