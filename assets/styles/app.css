@@ -106,6 +106,10 @@ h1 {
     font-size: 3em;
 }
 
+li {
+    list-style-type: none;
+}
+
 ul.dicearea {
     list-style-type: none;
     margin: 0;
@@ -114,6 +118,10 @@ ul.dicearea {
 
 ul.dicearea li {
     display: inline;
+}
+
+li:hover {
+    text-decoration: underline;
 }
 
 .flash-notice {
