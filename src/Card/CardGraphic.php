@@ -4,7 +4,8 @@ namespace App\Card;
 
 class CardGraphic extends Card
 {
-    public function __construct($value = null, $suit = null) {
+    public function __construct($value = null, $suit = null)
+    {
         parent::__construct($value, $suit);
     }
 
@@ -24,7 +25,7 @@ class CardGraphic extends Card
         "🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪", "🂫", "🂭", "🂮"
     ];
 
-    public function redCards ()
+    public function redCards()
     {
         $redCards = [];
 
@@ -38,12 +39,12 @@ class CardGraphic extends Card
         return $redCards;
     }
 
-    public function blackCards ()
+    public function blackCards()
     {
         $blackCards = [];
 
         $num = count($this->clubsGraphic) + count($this->spadesGraphic);
-        
+
         for ($x = 0; $x < $num; $x++) {
             array_push($blackCards, array_pop($this->clubsGraphic));
             array_push($blackCards, array_pop($this->spadesGraphic));
@@ -51,7 +52,7 @@ class CardGraphic extends Card
 
         return $blackCards;
     }
-    
+
     public function getHeartsAsString(): string
     {
         return $this->heartsGraphic[$this->value - 1];
@@ -66,7 +67,7 @@ class CardGraphic extends Card
     {
         return $this->clubsGraphic[$this->value - 1];
     }
-    
+
     public function getSpadesAsString(): string
     {
         return $this->spadesGraphic[$this->value - 1];

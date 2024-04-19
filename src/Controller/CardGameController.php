@@ -18,16 +18,14 @@ class CardGameController extends AbstractController
     #[Route("/card", name: "card")]
     public function card(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         return $this->render('card/card.html.twig');
     }
 
     #[Route("/card/deck", name: "card_deck")]
     public function deck(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $deck = new DeckOfCards();
         $graphic = new CardGraphic();
 
@@ -45,11 +43,10 @@ class CardGameController extends AbstractController
     #[Route("/card/deck/shuffle", name: "shuffle_cards")]
     public function shuffle(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $deck = new DeckOfCards();
         $graphic = new CardGraphic();
-        
+
         $session->set("shuffled_deck", $deck->shuffled_cards());
         $session->remove('available');
 
@@ -65,16 +62,14 @@ class CardGameController extends AbstractController
     #[Route("/card/deck/draw", name: "draw_card")]
     public function draw(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $graphic = new CardGraphic();
         $available = $session->get("available");
-    
+
         if ($available) {
-           
+
             $shuffledDeck = $session->get("current_deck");
-        } 
-        else {
+        } else {
             $deck = new DeckOfCards();
             $shuffledDeck = $deck->shuffled_cards();
         }
@@ -89,8 +84,7 @@ class CardGameController extends AbstractController
             );
 
             $session->set("available", "no");
-        }
-        else {
+        } else {
             $session->set("available", "yes");
         }
 
@@ -112,13 +106,12 @@ class CardGameController extends AbstractController
     public function drawCards(
         int $num,
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $graphic = new CardGraphic();
         $available = $session->get("available");
-        
+
         if ($available) {
-           
+
             $shuffledDeck = $session->get("current_deck");
         } else {
             $deck = new DeckOfCards();

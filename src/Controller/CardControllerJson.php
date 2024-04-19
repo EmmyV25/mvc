@@ -34,8 +34,7 @@ class CardControllerJson extends AbstractController
     #[Route("/api/deck/shuffle", name: "api_shuffle", methods: ['POST'])]
     public function apiShuffle(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $deck = new DeckOfCards();
         $session->set("api_shuffled_deck", $deck->shuffled_cards());
         $session->remove('available');
@@ -55,14 +54,12 @@ class CardControllerJson extends AbstractController
     #[Route("/api/deck/draw", name: "api_draw_card", methods: ['POST'])]
     public function apiDrawCard(
         SessionInterface $session
-    ): Response
-    { 
+    ): Response {
         $available = $session->get("available");
-    
+
         if ($available) {
             $shuffledDeck = $session->get("current_deck");
-        } 
-        else {
+        } else {
             $deck = new DeckOfCards();
             $shuffledDeck = $deck->shuffled_cards();
         }
@@ -91,26 +88,24 @@ class CardControllerJson extends AbstractController
     public function apiDrawCards(
         int $num,
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $available = $session->get("available");
-    
+
         if ($available) {
             $shuffledDeck = $session->get("current_deck");
-        } 
-        else {
+        } else {
             $deck = new DeckOfCards();
             $shuffledDeck = $deck->shuffled_cards();
         }
 
         $cards = [];
-        
+
         if ($num <= count($shuffledDeck)) {
             for ($x = 0; $x < $num; $x++) {
                 array_push($cards, array_pop($shuffledDeck));
             }
         }
-        
+
         $session->set("current_deck", $shuffledDeck);
         $session->set("available", "yes");
 
@@ -124,7 +119,7 @@ class CardControllerJson extends AbstractController
         $response->setEncodingOptions(
             $response->getEncodingOptions() | JSON_PRETTY_PRINT
         );
-        
+
         return $response;
     }
 

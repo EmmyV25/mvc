@@ -41,6 +41,7 @@ img {
     border-right: 1px solid #a69584;
     padding-left: 1em;
     padding-right: 1em;
+    padding-bottom: 1em
 }
 
 .article h1 {
@@ -94,7 +95,7 @@ input {
 }
 
 h1 {
-    border-bottom: 4px double green;
+    border-bottom: 4px double rgb(255, 255, 255);
 }
 
 .die {
