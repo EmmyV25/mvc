@@ -8,30 +8,30 @@
             <h1>API</h1>
         </header>
         
-        <p>Quote</p>
+        <p>Quote - View a random quote</p>
         <form method= "get" action="{{ path('quote') }}">
-            <input type="submit" value="View a Quote" />
+            <input type="submit" value="api/quote" />
         </form>
 
-        <p>Deck</p>
+        <p>Deck - View a deck of cards sorted by value and suits</p>
         <form method= "get" action="{{ path('api_deck') }}">
-            <input type="submit" value="View Deck" />
+            <input type="submit" value="api/deck" />
         </form>
 
-        <p>Shuffled Deck</p>
+        <p>Shuffled Deck - POST request shuffle the cards and return a JSON result</p>
         <form method= "post" action="{{ path('api_shuffle') }}">
-            <input type="submit" value="View Shuffled Deck" />
+            <input type="submit" value="api/deck/shuffle" />
         </form>
 
-        <p>Draw a Card</p>
+        <p>Draw a Card - POST request draw a card from the deck and show how many cards are left</p>
         <form method= "post" action="{{ path('api_draw_card') }}">
-            <input type="submit" value="View a Card" />
+            <input type="submit" value="api/deck/draw" />
         </form>
 
-        <p>Draw Cards</p>
+        <p>Draw Cards - POST request draw multiple cards and show how many cards are left</p>
         <form method= "post" action="{{ path('api_draw_cards_post') }}">
             <input type="number" name="num_cards" min="1" max="52" value="1">
-            <input type="submit" value="View Cards"/>
+            <input type="submit" value="api/deck/draw/:number"/>
         </form>
 
     </article>
