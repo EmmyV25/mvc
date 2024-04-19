@@ -7,11 +7,32 @@
         <header>
             <h1>API</h1>
         </header>
+        
+        <p>Quote</p>
+        <form method= "get" action="{{ path('quote') }}">
+            <input type="submit" value="View a Quote" />
+        </form>
 
-        <nav>
-            <ul>
-                <li><a href="/api/quote">Quote</a></li>
-            </ul>
-        </nav>
+        <p>Deck</p>
+        <form method= "get" action="{{ path('api_deck') }}">
+            <input type="submit" value="View Deck" />
+        </form>
+
+        <p>Shuffled Deck</p>
+        <form method= "post" action="{{ path('api_shuffle') }}">
+            <input type="submit" value="View Shuffled Deck" />
+        </form>
+
+        <p>Draw a Card</p>
+        <form method= "post" action="{{ path('api_draw_card') }}">
+            <input type="submit" value="View a Card" />
+        </form>
+
+        <p>Draw Cards</p>
+        <form method= "post" action="{{ path('api_draw_cards_post') }}">
+            <input type="number" name="num_cards" min="1" max="52" value="1">
+            <input type="submit" value="View Cards"/>
+        </form>
+
     </article>
 {% endblock %}
